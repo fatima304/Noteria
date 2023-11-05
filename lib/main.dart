@@ -15,7 +15,7 @@ class NotesApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: const Color.fromARGB(255, 89, 66, 117),
+          backgroundColor: const Color.fromARGB(255, 117, 66, 101),
         ),
       ),
     );
