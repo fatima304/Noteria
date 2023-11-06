@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:noteapp/Widgets/addNoteSheet.dart';
 import 'package:noteapp/Widgets/notesViewBody.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class NotesView extends StatelessWidget {
   const NotesView({super.key});
@@ -10,6 +11,7 @@ class NotesView extends StatelessWidget {
     return Scaffold(
       body: const NotesViewBody(),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.amber,
         onPressed: () {
           showModalBottomSheet(
             shape: const RoundedRectangleBorder(
@@ -26,7 +28,8 @@ class NotesView extends StatelessWidget {
           );
         },
         child: const Icon(
-          Icons.add,
+          FontAwesomeIcons.pen,
+          color: Colors.white,
         ),
       ),
     );

@@ -18,7 +18,7 @@ class NotesItem extends StatelessWidget {
           bottom: 24,
         ),
         decoration: const BoxDecoration(
-          color: Color.fromARGB(255, 145, 56, 121),
+          color: Color.fromARGB(255, 46, 105, 48),
           borderRadius: BorderRadius.all(
             Radius.circular(
               20,

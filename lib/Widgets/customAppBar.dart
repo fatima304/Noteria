@@ -6,6 +6,7 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         const Text(
           'My Notes',
@@ -13,11 +14,18 @@ class CustomAppBar extends StatelessWidget {
             fontSize: 28,
           ),
         ),
+        const SizedBox(
+          height: 10,
+        ),
         const Text(
           'Your daily notes that reminds you',
           style: TextStyle(
             color: Colors.grey,
+            fontSize: 17,
           ),
+        ),
+        const SizedBox(
+          height: 10,
         ),
         TextField(
           decoration: InputDecoration(
