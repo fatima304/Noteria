@@ -15,10 +15,10 @@ class NotesApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         // fontFamily: '',
-        brightness: Brightness.light,
+        brightness: Brightness.dark,
       ),
-      debugShowCheckedModeBanner: false,
       home: const NotesView(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
