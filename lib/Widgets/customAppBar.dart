@@ -27,7 +27,7 @@ class CustomAppBar extends StatelessWidget {
         const SizedBox(
           height: 10,
         ),
-        TextField(
+        TextFormField(
           decoration: InputDecoration(
             fillColor: Colors.grey,
             contentPadding: const EdgeInsets.symmetric(
