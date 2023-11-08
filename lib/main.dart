@@ -5,7 +5,6 @@ import 'package:hive_flutter/adapters.dart';
 import 'package:noteapp/Models/noteModel.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:noteapp/simpleBlocObserver.dart';
-import 'package:noteapp/Cubits/addNoteCubit/add_note_cubit.dart';
 
 void main() async {
   Bloc.observer = SimpleBlocObserver();
@@ -28,7 +27,7 @@ class NotesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        // fontFamily: '',
+        fontFamily: 'Poppins',
         brightness: Brightness.dark,
       ),
       home: const Scaffold(
