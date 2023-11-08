@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:noteapp/Conestance.dart';
-import 'package:noteapp/simpleBlocObserver.dart';
 import 'package:noteapp/splashscreen.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:noteapp/Models/noteModel.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:noteapp/simpleBlocObserver.dart';
 import 'package:noteapp/Cubits/addNoteCubit/add_note_cubit.dart';
 
 void main() async {
   Bloc.observer = SimpleBlocObserver();
 
   await Hive.initFlutter();
-  await Hive.openBox(kNoteBox);
+  await Hive.openBox<NoteModel>(kNoteBox);
   Hive.registerAdapter(
     NoteModelAdapter(),
   );
