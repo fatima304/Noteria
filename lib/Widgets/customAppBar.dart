@@ -1,47 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:noteapp/Widgets/textField.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        const Text(
+        Text(
           'My Notes',
           style: TextStyle(
             fontSize: 28,
           ),
         ),
-        const SizedBox(
+        SizedBox(
           height: 10,
         ),
-        const Text(
+        Text(
           'Your daily notes that reminds you',
           style: TextStyle(
             color: Colors.grey,
             fontSize: 17,
           ),
         ),
-        const SizedBox(
+        SizedBox(
           height: 10,
         ),
-        TextFormField(
-          decoration: InputDecoration(
-            fillColor: Colors.grey,
-            contentPadding: const EdgeInsets.symmetric(
-              vertical: 5,
-              horizontal: 10,
-            ),
-            label: const Text('search'),
-            prefixIcon: const Icon(Icons.search),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            hintText: 'Enter a city',
-          ),
-        ),
+        CustomTextFormField(hintText: 'Search'),
       ],
     );
   }
