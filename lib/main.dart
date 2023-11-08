@@ -11,10 +11,10 @@ void main() async {
   Bloc.observer = SimpleBlocObserver();
 
   await Hive.initFlutter();
-  await Hive.openBox<NoteModel>(kNoteBox);
   Hive.registerAdapter(
     NoteModelAdapter(),
   );
+  await Hive.openBox<NoteModel>(kNoteBox);
 
   runApp(
     const NotesApp(),
@@ -26,22 +26,15 @@ class NotesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(
-          create: (context) => AddNoteCubit(),
-        ),
-      ],
-      child: MaterialApp(
-        theme: ThemeData(
-          // fontFamily: '',
-          brightness: Brightness.dark,
-        ),
-        home: const Scaffold(
-          body: SplashScreen(),
-        ),
-        debugShowCheckedModeBanner: false,
+    return MaterialApp(
+      theme: ThemeData(
+        // fontFamily: '',
+        brightness: Brightness.dark,
       ),
+      home: const Scaffold(
+        body: SplashScreen(),
+      ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
