@@ -66,7 +66,9 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
               hintText: widget.note.subTitle,
               maxLines: 7,
             ),
-            const EditColors(),
+            EditColors(
+              note: widget.note,
+            ),
           ],
         ),
       ),
@@ -75,14 +77,22 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
 }
 
 class EditColors extends StatefulWidget {
-  const EditColors({super.key});
+  const EditColors({super.key, required this.note});
+  final NoteModel note;
 
   @override
   State<EditColors> createState() => _EditColorsState();
 }
 
 class _EditColorsState extends State<EditColors> {
-  int currentIndex = 0;
+  late int currentIndex;
+  @override
+  void initState() {
+    currentIndex = colors.indexOf(
+      Color(widget.note.color),
+    );
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -100,6 +110,7 @@ class _EditColorsState extends State<EditColors> {
               child: GestureDetector(
                 onTap: () {
                   currentIndex = index;
+                  widget.note.color = colors[index].value;
                   setState(() {});
                 },
                 child: ColorPalette(
