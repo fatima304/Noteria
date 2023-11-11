@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:noteapp/Conestance.dart';
 import 'package:noteapp/Models/noteModel.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:noteapp/Widgets/TextField.dart';
+import 'package:noteapp/Widgets/colorsPalette.dart';
 import 'package:noteapp/Cubits/NotesCubit/notes_cubit_cubit.dart';
 
 class EditNoteViewBody extends StatefulWidget {
@@ -64,9 +66,49 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
               hintText: widget.note.subTitle,
               maxLines: 7,
             ),
+            const EditColors(),
           ],
         ),
       ),
+    );
+  }
+}
+
+class EditColors extends StatefulWidget {
+  const EditColors({super.key});
+
+  @override
+  State<EditColors> createState() => _EditColorsState();
+}
+
+class _EditColorsState extends State<EditColors> {
+  int currentIndex = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 40,
+      child: ListView.builder(
+          itemCount: colors.length,
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 2,
+                vertical: 2,
+              ),
+              child: GestureDetector(
+                onTap: () {
+                  currentIndex = index;
+                  setState(() {});
+                },
+                child: ColorPalette(
+                  color: colors[index],
+                  isActive: currentIndex == index,
+                ),
+              ),
+            );
+          }),
     );
   }
 }
