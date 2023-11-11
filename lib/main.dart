@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:noteapp/Conestance.dart';
+import 'package:noteapp/Cubits/NotesCubit/notes_cubit_cubit.dart';
 import 'package:noteapp/splashscreen.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:noteapp/Models/noteModel.dart';
@@ -25,15 +26,18 @@ class NotesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        fontFamily: 'Poppins',
-        brightness: Brightness.dark,
+    return BlocProvider(
+      create: (context) => NotesCubit(),
+      child: MaterialApp(
+        theme: ThemeData(
+          fontFamily: 'Poppins',
+          brightness: Brightness.dark,
+        ),
+        home: const Scaffold(
+          body: SplashScreen(),
+        ),
+        debugShowCheckedModeBanner: false,
       ),
-      home: const Scaffold(
-        body: SplashScreen(),
-      ),
-      debugShowCheckedModeBanner: false,
     );
   }
 }

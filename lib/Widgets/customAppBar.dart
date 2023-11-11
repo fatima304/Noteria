@@ -28,7 +28,10 @@ class CustomAppBar extends StatelessWidget {
         SizedBox(
           height: 10,
         ),
-        CustomTextFormField(hintText: 'Search'),
+        CustomTextFormField(
+          hintText: 'Search',
+          onChanged: null,
+        ),
       ],
     );
   }

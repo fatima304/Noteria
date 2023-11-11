@@ -32,6 +32,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
             onSaved: (value) {
               title = value;
             },
+            onChanged: null,
           ),
           const SizedBox(
             height: 15,
@@ -42,6 +43,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
             onSaved: (value) {
               subTitle = value;
             },
+            onChanged: null,
           ),
           const SizedBox(
             height: 30,
