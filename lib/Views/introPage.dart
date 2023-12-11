@@ -123,19 +123,19 @@ class OnBoarding extends StatelessWidget {
 final List<OnBoardModel> onBoardData = [
   const OnBoardModel(
     title: "Organize Your Thoughts",
-    description: 'Quickly jot down thoughts, ideas, and tasks in a snap',
+    description:
+        'Capture Your Thoughts Instantly. Edit and Organize Effortlessly',
     imgUrl: "assets/1.png",
   ),
-  const OnBoardModel(
-    title: "Search Your Notes:",
-    description:
-        "Effortlessly find what you need with our powerful search feature",
-    imgUrl: 'assets/2.png',
-  ),
+  // const OnBoardModel(
+  //   title: "Search Your Notes:",
+  //   description:
+  //       "Effortlessly find what you need with our powerful search feature",
+  //   imgUrl: 'assets/2.png',
+  // ),
   const OnBoardModel(
     title: "Customize Your Notes",
-    description:
-        "Personalize your notes with different fonts, colors, and styles",
-    imgUrl: 'assets/1.png',
+    description: "Personalize your notes with different colors, and styles",
+    imgUrl: 'assets/2.png',
   ),
 ];

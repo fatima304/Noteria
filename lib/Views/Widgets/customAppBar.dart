@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:noteapp/Views/Widgets/textField.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -19,7 +18,7 @@ class CustomAppBar extends StatelessWidget {
           height: 10,
         ),
         Text(
-          'Your daily notes that reminds you',
+          'Your daily notes that reminds you 😊',
           style: TextStyle(
             color: Colors.grey,
             fontSize: 17,
@@ -27,10 +26,6 @@ class CustomAppBar extends StatelessWidget {
         ),
         SizedBox(
           height: 10,
-        ),
-        CustomTextFormField(
-          hintText: 'Search',
-          onChanged: null,
         ),
       ],
     );

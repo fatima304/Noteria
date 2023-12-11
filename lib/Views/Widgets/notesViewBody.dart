@@ -23,7 +23,7 @@ class _NotesViewBodyState extends State<NotesViewBody> {
     return const Padding(
       padding: EdgeInsets.fromLTRB(
         16,
-        25,
+        40,
         16,
         8,
       ),

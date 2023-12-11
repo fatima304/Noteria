@@ -9,7 +9,6 @@ class CustomTextFormField extends StatelessWidget {
     required this.hintText,
     required this.onChanged,
   });
-
   final int maxLines;
   final String hintText;
   final void Function(String?)? onSaved;
