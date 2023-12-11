@@ -31,7 +31,7 @@ class _NotesViewBodyState extends State<NotesViewBody> {
         children: [
           CustomAppBar(),
           Expanded(
-            child: NotesListView(),
+            child:  NotesListView(),
           ),
         ],
       ),

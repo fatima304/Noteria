@@ -45,6 +45,9 @@ dependencies:
   modal_progress_hud_nsn: ^0.4.0
   intl: ^0.18.1
   flutter_launcher_icons: ^0.13.1
+  flutter_speed_dial: ^7.0.0
+
+ 
 
 flutter_launcher_icons:
   android: "launcher_icon"
@@ -99,7 +102,7 @@ flutter:
   fonts:
     - family: Poppins
       fonts:
-        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-MediumItalic.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
