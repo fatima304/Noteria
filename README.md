@@ -2,6 +2,7 @@
 
 A new Flutter project.
 
+![photo_2023-12-18_22-11-55](https://github.com/fatima304/Noteria/assets/101287056/ac61d03c-c832-45aa-8b67-8ac91573f0fb)
 
 ![photo_2023-12-11_23-39-58](https://github.com/fatima304/Noteria/assets/101287056/8e49a420-24c8-485e-8cef-82f8b3b73ad4)
 
